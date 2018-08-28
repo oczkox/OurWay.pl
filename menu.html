@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="/css/bootstrap-social.css" >
+    <link rel="stylesheet" href="/css/style.css" >
+    <link rel="stylesheet" href="/css/bootstrap-4-navbar.css" >
+
+    <script src="/JS/jquery.cookie.js"></script>
+    <script>
+    $("input").on("click", viewSomething);
+    function viewSomething() { 
+        if ($.cookie('style') != 'light') { 
+        $('html, body, div, a').toggleClass("light");            
+        $.cookie("style", "light", {  path: '/' }); 
+        }
+        else { 
+        $('html, body, div, a').removeClass("light");
+        $.cookie("style", null, { path: '/' });
+        } 
+    }
+        $(document).ready(function() {
+        if ($.cookie('style') == 'light') {
+        $('html, body, div, a').addClass("light");
+        }
+    })
+    </script>
+</head>
+
+<body >
+    <div class="container" >
+        <!-- Headline -->
+        <h1 class="col-10" style="margin-bottom: 0px; padding-bottom: 0px;">Witaj w świecie przygody!</h1>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-inverse nav-pills navbar-toggleable-md">
+            <div>
+                <button class="navbar-toggler navbar-toggler-right" type="button" role="button" data-toggle="collapse" data-target="#myContent" 
+                aria-controls="myContent" aria-expanded="false" aria-label="Toggle Navigation" style="background-color: rgba(0,0,0,.4); border-radius: 10px; margin-right: -30px;">
+                <span class="navbar-toggler-icon m-1" ></span>
+                </button>
+                <span>
+                <a href="/index.html" class="navbar-brand pt-0 mt-0" title="Wróć do strony głównej"><img src="/static/images/logo1.png" height="60px" style="margin-left: -30px; margin-right: -10px; margin-top: -5px; padding: 0;"></a>
+                <input type="button" class="btnchangebg" id="buttons-sm" value="Tło" title="zmień tło na jaśniejsze lub ciemniejsze" ></input>
+                <a href="https://web.facebook.com/OurWayPL/" title="Znajdź OurWay.pl na Facebooku" target="_blank" id="buttons-sm"><img src="/static/icons/facebook.png" style="height: 41px;  margin-top: -3px;" alt="Facebook"></a>
+                </span> </div>
+
+                <div class="collapse navbar-collapse" id="myContent">
+                    <ul class="navbar-nav">
+                        <!-- OPOWIEŚCI -->
+                            <li class="dropdown">
+                                <a class="nav-item nav-link dropdown-toggle" id="opowiescDropdown" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" href="#" title="Opowieści - Relacje z podróży">Opowieści</a>
+                                <ul class="dropdown-menu p-0 mt-0" aria-labelledby="opowiescDropdown"  id="Nav">
+                                <!-- EUROPA NAV -->
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Europa">Europa</a>
+                                        <ul class="dropdown-menu p-0">
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Rosja">Rosja</a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item" href="/Rosja/Elbrus/elbrus2010opowiesc.html" title="Pierwsza Wyprawa! W górę!">Elbrus'10 <span class="badge badge-danger badge-pill">NEW</span></a></li>
+                                                </ul>
+                                                    <li><a class="dropdown-item disabled" href="#" title="Tym razem 4x4 Bałkany!">Bałkany'15</a></li>
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Hiszpania">Hiszpania</a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/costa_blanca/costablanca2017opowiesc.html" title="Costa Blanca">Costa Blanc</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Rumunia">Rumunia</a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2 disabled" href="/Rumunia/Transylwania/opowiesci.html" title="Transylwania">Transylwania</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="/Rumunia/Wołoszczyzna/opowiesci.html" title="Transylwania">Wołoszczyzna</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Polska">Polska <span class="badge badge-danger badge-pill">NEW</span></a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2" href="/Polska/Rzeki/opowiesc.html" title="Daj sie porwać wodzie!">Rzeki Spływy</a></li>
+                                                    <li><a class="dropdown-item pl-2" href="/Polska/BeskidMakowski/opowiesci.html" title="Beskid Makowski">Beskid Makowski <span class="badge badge-danger badge-pill">NEW</span></a></li>
+                                                    <li><a class="dropdown-item pl-2" href="/Polska/slask/opowiesci.html" title="Śląsk">Śląsk <span class="badge badge-danger badge-pill">NEW</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Słowacja">Słowacja <span class="badge badge-danger badge-pill">NEW</span></a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2" href="/Slowacja/malafatra/opowiesci.html" title="Mała Fatra">Mała Fatra</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li> <!-- koniec menu Europa -->
+                                <!-- AZJA NAV -->
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Azja">Azja</a>
+                                        <ul class="dropdown-menu p-0">
+                                            <li><a class="dropdown-item disabled" href="#" title="Autostopem do Gruzji i Armenii!">Gruzja Armenia 2012</a></li>
+                                            <li><a class="dropdown-item disabled" href="#" title="Gruzja tym razem samolotem!">Gruzja 2016</a></li>
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Kirgistan">Kirgistan</a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Biszkek">Biszkek</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Trek do Ala'Kul">Trek do Ala'Kul</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Trek na Uchitel">Trek na Uchitel</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Kaji-Say i Issyk-Kul">Kaji-Say i Issyk-Kul</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Song-Kul">Song-Kul</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>  <!-- koniec menu Azja -->   
+                                
+                                <!-- Ameryka PN NAV 
+                                    <li><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Ameryka Północna">Ameryka Północna</a>
+                                    </li> <!-- koniec menu Ameryka PN  
+                                <!-- Ameryka PD NAV 
+                                    <li><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Ameryka Południowa">Ameryka Południowa</a>
+                                    </li> <!-- koniec menu Ameryka PD 
+                                <!-- Austraila i Oceania NAV 
+                                    <li><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Australia i Oceania">Australia i Oceania</a>
+                                    
+                                    </li> <!-- koniec menu Austraila i Ocenia 
+                                <!--Afryka NAV 
+                                    <li><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Afryka">Afryka</a>
+                                    
+                                    </li> <!-- koniec menu Afryka -->             
+                                </ul>
+                            </li> <!-- Koniec menu Opowieści --> 
+
+                        <!-- WSKAZÓWKI -->
+                            <li class="dropdown">                             
+                                <a class="nav-item nav-link dropdown-toggle" id="wskazowkiDropdown" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" href="#" title="Wskazówki - praktyczne porady">Wskazówki</a>
+                                <ul class="dropdown-menu p-0 mt-0" aria-labelledby="wskazowkiDropdown"  id="Nav">
+                                <!-- EUROPA NAV -->
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle " href="#" title="Europa">Europa</a>
+                                        <ul class="dropdown-menu p-0">
+                                            <!-- <li><a class="dropdown-item p-1 disabled" href="#">Elbrus 2010</a></li> -->
+                                            <!-- ALBANIA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Albania">Albania</a>
+                                                    <ul class="dropdown-menu p-0">
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Kanion Langarica - gorące źródła">Kanion Langarica</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Blue Eye - zimne źródło o niezwykłej barwie">Blue Eye</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Gjirokastra - miasto twierdza">Gjirokastra</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Kasmil - 'dzika' plaża">Ksamil - "dzika" plaża</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Saranda - odkrywamy wraki statków">Saranda - Wraki</a></li>  
+                                                    </ul>
+                                            <!-- BOŚNIA I HERCEGOWINA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Bośnia i Hercegowina">Bośnia i Hercegowina</a>
+                                                    <ul class="dropdown-menu p-0 m-0"> 
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Sarajewo">Sarajewo</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Mostar">Mostar</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Wodospady Kravica">Wodospady Kravica</a></li>
+                                                    </ul> 
+                                            <!-- CZARNOGÓRA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Czarnogóra">Czarogóra</a>
+                                                    <ul class="dropdown-menu p-0 m-0"> 
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="#" title="Góry Przeklęte">Góry Przeklęte</a></li>
+                                                    </ul>
+                                            <!-- HISZPANIA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Hiszpania">Hiszpania</a>
+                                                    <ul class="dropdown-menu p-0 m-0"> 
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/hiszpania-wskazowki.html" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/hiszpania-wskazowki.html#Alicante" title="Alicante">Alicante</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/hiszpania-wskazowki.html#Torrevieja" title="Torrevieja">Torrevieja</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/hiszpania-wskazowki.html#Villajoiosa" title="Villajoiosa">Villajoiosa</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/hiszpania-wskazowki.html#Castillo" title="Castillo de Guadelest">Castillo de Guadelest </a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/hiszpania-wskazowki.html#Altea" title="Altea">Altea</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/hiszpania-wskazowki.html#Calp" title="Calp">Calp</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/hiszpania-wskazowki.html#Plaza" title="...">Plaża na M</a></li>
+                                                    </ul>
+                                            <!-- MACEDONIA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Macedonia">Macedonia</a> <!--
+                                                    <ul class="dropdown-menu p-0 m-0">
+                                                    </ul> -->
+                                            <!-- POLSKA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Polska">Polska <span class="badge badge-danger badge-pill">NEW</span></a>
+                                                    <ul class="dropdown-menu p-0">
+                                                        <li><a class="dropdown-item pl-2" href="/Polska/polska-wskazowki.html" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                        <li><a class="dropdown-item pl-2" href="/Polska/polska-wskazowki.html#SplywDunajcem18" title="Spływ Dunajcem 2018">Spływ Dunajcem'18</a></li>
+                                                        <li><a class="dropdown-item pl-2" href="/Polska/polska-wskazowki.html#BeskidMakowski" title="Beskid Makowski">Beskid Makowski <span class="badge badge-danger badge-pill">NEW</span></a></li>
+                                                        <li><a class="dropdown-item pl-2" href="/Polska/polska-wskazowki.html#Slask" title="Śląsk">Śląsk <span class="badge badge-danger badge-pill">NEW</span></a></li>
+                                                    </ul>
+                                                </li>
+                                            <!-- RUMUNIA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Rumunia">Rumunia</a>
+                                                    <ul class="dropdown-menu p-0">
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/Rumunia/Rumunia-wskazowki.html" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/Rumunia/Rumunia-wskazowki.html#Transylwania" title="Transylwania">Transylwania</a></li>
+                                                    </ul>
+                                                </li>
+                                            <!-- SŁOWACJA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Słowacja">Słowacja <span class="badge badge-danger badge-pill">NEW</span></a>
+                                                    <ul class="dropdown-menu p-0 m-0">
+                                                        <li><a class="dropdown-item pl-2" href="/Slowacja/slowacja-wskazowki.html" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                        <li><a class="dropdown-item pl-2" href="/Slowacja/slowacja-wskazowki.html#BasenyTermalne" title="Baseny Termalne">Baseny Termalne</a></li>
+                                                        <li><a class="dropdown-item pl-2" href="/Slowacja/slowacja-wskazowki.html#MalaFatra" title="Mała Fatra">Mała Fatra</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/Slowacja/slowacja-wskazowki.html#SlowackiRaj" title="Słowacki Raj">Słowacki Raj</a></li>
+                                                        <li><a class="dropdown-item pl-2 disabled" href="/Slowacja/slowacja-wskazowki.html#NizneTatry" title="Niżne Tatry">Niżne Tatry</a></li>
+                                                        <li><a class="dropdown-item pl-2" href="/Slowacja/slowacja-wskazowki.html#Kuchnia" title="Kuchnia">Kuchnia</a></li>
+                                                    </ul> 
+                                            <!-- SYCYLIA -->
+                                                <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Scylia">Sycylia</a> <!--
+                                                    <ul class="dropdown-menu p-0 m-0">
+                                                    </ul> -->
+                                        </ul>
+                                    </li>
+                                <!-- AZJA NAV -->
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Azja">Azja</a>
+                                        <ul class="dropdown-menu p-0">
+                                            <!-- ARMENIA -->
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Armenia">Armenia</a>
+                                            <!-- <ul class="dropdown-menu p-0"> 
+                                                    <li><a class="dropdown-item p-1" href="#" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Biszkek">Biszkek</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Trek do Ala'Kul">Trek do Ala'Kul</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Trek na Uchitel">Trek na Uchitel</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Kaji-Say i Issyk-Kul">Kaji-Say i Issyk-Kul</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Song-Kul">Song-Kul</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="kuchnia">Kuchnia</a></li>
+                                                </ul> -->
+                                            </li>
+                                            <!-- GRUZJA -->
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Gruzja">Gruzja</a>
+                                                <!-- <ul class="dropdown-menu p-0">  
+                                                    <li><a class="dropdown-item p-1" href="#" title="Informacje Ogólne">Informacje Ogólne</a></li>  
+                                                    <li><a class="dropdown-item p-1" href="#" title="Biszkek">Biszkek</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Trek do Ala'Kul">Trek do Ala'Kul</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Trek na Uchitel">Trek na Uchitel</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Kaji-Say i Issyk-Kul">Kaji-Say i Issyk-Kul</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="Song-Kul">Song-Kul</a></li>
+                                                    <li><a class="dropdown-item p-1" href="#" title="kuchnia">Kuchnia</a></li> 
+                                                </ul> -->
+                                            </li>    
+                                            <!-- KIRGISTAN -->
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Kirgistan">Kirgistan</a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Informacje Ogólne">Informacje Ogólne</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Biszkek">Biszkek</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="park Al'Archa">park Al'Archa</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Trek na Uchitel">szczyt Uchitel</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="jezioro Ala'Kul">jezioro Ala'Kul</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Kaji-Say">Kaji-Say</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="jezioro Issyk-Kul">jezioro Issyk-Kul</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="jezioro Song-Kul">jezioro Song-Kul</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="kuchnia">Kuchnia</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>    
+                                    </li><!-- Koniec menu Azja -->
+                                <!-- Ameryka PN NAV
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Ameryka Północna">Ameryka Północna</a>
+                                    </li> <!-- koniec menu Ameryka PN
+                                <!-- Ameryka PD NAV
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Ameryka Południowa">Ameryka Południowa</a>
+                                    </li> <!-- koniec menu Ameryka PD 
+                                <!-- Austraila i Oceania NAV 
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Australia i Oceania">Australia i Oceania</a>
+
+                                    </li> <!-- koniec menu Austraila i Ocenia 
+                                <!--Afryka NAV 
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Afryka">Afryka</a>
+                                    </li> <!-- koniec menu Afryka -->
+                                </ul> <!-- Koniec menu Wskazówki -->
+                            </li>
+                        <!-- GALERIA -->
+                            <li class="dropdown">                             
+                                <a class="nav-item nav-link dropdown-toggle" id="galeriaDropdown" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" href="#" title="Galeria - Zdjęcia i Filmy">Galeria</a>
+                                <ul class="dropdown-menu p-0 mt-0" aria-labelledby="galeriaDropdown"  id="Nav">
+                                <!-- EUROPA NAV -->
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Europa">Europa</a>
+                                        <ul class="dropdown-menu p-0">
+
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Słowenia">Słowenia</a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item disabled pl-2" href="#" title="Alpy Julijskie'14">Alpy Julijskie'14</a></li>
+                                                </ul>
+                                            <li><a class="dropdown-item disabled" href="#" title="Sycylia 2014 - wino i pizza">Scycylia 2014</a></li>
+                                            <li><a class="dropdown-item disabled" href="#" title="Tym razem 4x4 Bałkany!">Bałkany 2015</a></li>
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Czechy">Czechy</a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Frydland">Zamek Frydland 2016</a>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Praga">Praga 2017</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Hiszpania">Hiszpania</a>
+                                                <ul class="dropdown-menu p-0 m-0">
+                                                    <li><a class="dropdown-item pl-2 disabled" href="/hiszpania/costa_blanca/costablanca2017galeria.html" title="Costa Blanca">Costa Blanca</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Sevilla - Feria de Abril">Sevilla - Feria de Abril</a></li>
+                                                </ul>
+                                            </li>
+                                        <!-- ROSJA -->
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Rosja">Rosja</a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2" href="/Rosja/Elbrus/elbrus2010galeria.html" title="Pierwsza Wyprawa! W górę!">Elbrus'10</a></li>
+                                                </ul>
+                                        <!-- RUMUNIA -->
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle disabled" href="#" title="Rumunia">Rumunia </a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <!-- <li><a class="dropdown-item pl-2 disabled" href="/Rumunia/Transylwania/transylwania2018galeria.html" title="Transylwania">Transylwania'18</a></li> -->
+                                                </ul>
+                                            </li>
+                                        <!-- POLSKA -->
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Polska">Polska <span class="badge badge-danger badge-pill">NEW</span></a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2" href="/Polska/Rzeki/galeria.html" title="Daj sie porwać wodzie!">Rzeki Spływy</a></li>
+                                                    <li><a class="dropdown-item pl-2" href="/Polska/BeskidMakowski/galeria.html" title="Beskid Makowski">Beskid Makowski <span class="badge badge-danger badge-pill">NEW</span></a></li>
+                                                    <li><a class="dropdown-item pl-2" href="/Polska/slask/galeria.html" title="Śląsk">Śląsk <span class="badge badge-danger badge-pill">NEW</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Słowacja">Słowacja <span class="badge badge-danger badge-pill">NEW</span></a>
+                                                <ul class="dropdown-menu p-0">
+                                                    <li><a class="dropdown-item pl-2" href="/Slowacja/malafatra/galeria.html" title="Mała Fatra">Mała Fatra</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Słowacki Raj">Słowacki Raj</a></li>
+                                                    <li><a class="dropdown-item pl-2 disabled" href="#" title="Niżne Tatry">Niżne Tatry</a></li>
+                                                </ul>
+                                            </li>                                                        
+                                        </ul>
+                                    </li> <!-- koniec menu Europa -->
+                                <!-- AZJA NAV -->
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" title="Azja">Azja</a>
+                                        <ul class="dropdown-menu p-0">
+                                            <li><a class="dropdown-item disabled" href="#" title="Autostopem do Gruzji i Armenii!">Gruzja Armenia 2012</a></li>
+                                            <li><a class="dropdown-item disabled" href="#" title="Gruzja tym razem samolotem!">Gruzja 2016</a></li>
+                                            <li><a class="dropdown-item disabled" href="#" title="Dzikie góry Kirgizji!">Kirgistan 2017</a></li>
+                                        </ul>
+                                    </li>  <!-- koniec menu Azja -->   
+                                <!-- Ameryka PN NAV 
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Ameryka Północna">Ameryka Północna</a>
+                                    </li> <!-- koniec menu Ameryka PN  
+                                <!-- Ameryka PD NAV 
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Ameryka Południowa">Ameryka Południowa</a>
+                                    </li> <!-- koniec menu Ameryka PD 
+                                <!-- Austraila i Oceania NAV 
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Australia i Oceania">Australia i Oceania</a>
+                                    </li> <!-- koniec menu Austraila i Ocenia
+                                <!--Afryka NAV 
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle pl-2 disabled" href="#" title="Afryka">Afryka</a>
+                                    </li> <!-- koniec menu Afryka -->
+                                </ul>
+                            </li> <!-- Koniec menu Opowieści -->
+                        <!-- O TYM I OWYM -->
+                            <li class="dropdown">                             
+                                <a class="nav-item nav-link dropdown-toggle" id="otymDropdown" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" href="index.htm" title="O tym i o owym - nasz sprzęt - spostrzeżenia - wady/zalety">O tym i o owym</a>
+                                <ul class="dropdown-menu p-0 mt-0" aria-labelledby="otymDropdown"  id="Nav">
+                                    <li><a class="dropdown-item disabled" href="#" title="Sprzęt">Sprzęt</a></li>
+                                    <li><a class="dropdown-item disabled" href="/inne/lio.html" title="Żywność liofilizowana">Żywność liofilizowana</a></li>
+                                    <li class="dropdown dropdown-submenu"><a class="dropdown-item dropdown-toggle mt-0 disabled" href="#" title="Lista rzecz">Lista rzeczy</a>
+                                        <!-- <ul class="dropdown-menu p-0 mt-0 mr-0">
+                                            <li><a class="dropdown-item pl-2 " href="#">Wyprawa Górska</a></li>
+                                            <li><a class="dropdown-item pl-2" href="#">Wycieczka Górska</a></li>
+                                        </ul> -->
+                                    </li>  
+                                </ul>
+                            </li> <!-- Koniec o tym i owym -->
+                    
+                        <!-- btn zmiana tła -->
+                        <span><input type="button" class="btnchangebg" id="buttons-lg" value="Zmień Tło" title="zmień tło na jaśniejsze lub ciemniejsze"></input></span>  
+                        <span><a class="btn btn-social-icon btn-facebook" id="buttons-lg" href="https://web.facebook.com/OurWayPL/" title="Znajdź OurWay.pl na Facebooku" target="_blank">
+                        <span class="fa fa-facebook"></a>
+                    </span>        
+                </ul> <!-- navbar-nav -->
+            </div> <!-- collapse -->
+        </nav>
+    </div>
+    <script src="/JS/bootstrap-4-navbar.js"></script>
+    <script src="/JS/tether.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/04ea50ebda.js"></script>
+</body>
+</html>
