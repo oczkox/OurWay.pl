@@ -346,9 +346,13 @@
         line-height: 25px;
     }
     .card-img-top {
-        width: 100%;
+        width: auto;
         border-radius: 80px;
         border: 3px solid rgba(0, 0, 0, 0.4) ;
+        text-align: center;
+    }
+    .sidebar {
+        width: 100%;
     }
     .card-title {
         text-shadow:
@@ -590,7 +594,7 @@ IMG.displayedleft {
         color: black;
         padding: 3px;
     }
-    .topcard {    
+    .topcard {
         display: none;
     }
     .mobile {
@@ -602,10 +606,10 @@ IMG.displayedleft {
         margin: 0;
         padding: 0 2%;
     }
-    .card-img-top {
-        width: 280px;
+    /* .card-img-top {
+        width: auto;
         border-radius: 80px;
-    }
+    } */
     .btnSideBar {
         padding: 0;
         margin: 5px;
@@ -653,10 +657,6 @@ IMG.displayedleft {
     .main dd {
         margin: 0;
     }
-    /* CO TO JEST ????? NIE MA W INDEX, MENU, SIDEBAR.HTML
-     .sidebar {
-        overflow-y: hidden; 
-    } */
     .nav-pills a {
         color: black;
         padding: 3px;
@@ -668,10 +668,10 @@ IMG.displayedleft {
         margin: 0;
         padding: 0 8%;
     }
-    .card-img-top {
+    /* .card-img-top {
         width: auto;
         border-radius: 80px;
-    } 
+    } */
     .btn {
         padding: 5px;
     }
@@ -768,15 +768,14 @@ IMG.displayedleft {
         left: 18vw;
     }
   }
-    @media screen and (min-width:0\0) { 
+@media screen and (min-width:0\0) {
     .carousel {
         display: none;}
     }
-    @supports (-ms-ime-align:auto) {
+@supports (-ms-ime-align:auto) {
     .carousel {
         display: none; }
     }
-  }
 
 
 
