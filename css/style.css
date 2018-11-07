@@ -49,7 +49,7 @@
         font-family: 'Caveat', cursive, Geneva, sans-serif;
     }
     ul.margin {
-        font-size: 1    5px;
+        font-size: 15px;
     }
     .blue {
         color: rgb(0, 119, 255);
@@ -91,12 +91,6 @@
         font-size: 1em;
         transition: 0.5s;
     }
-    /* a.link {
-        margin: 5px 10px;
-        text-align: center;
-        font-size: 1.1em;
-        transition: 0.5s;
-    } */
     img.displayed {
         float: left;
         margin-right: 35px;
@@ -119,8 +113,9 @@
         display: none;
     }
     .hidden {
-        display:none;
+        display: none;
     }
+
 /* NAVIGATION */
 
     .header {
@@ -156,9 +151,8 @@
     }
 
     .dropdown-submenu>.dropdown-menu  {
-        top:0;left:100%;
-        /* margin-top:-6px;margin-left:-1px; */
-        /* -webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px; */
+        top:0;
+        left:100%;
       }
 
     .btnchangebg {
@@ -228,7 +222,7 @@
         color:white; 
         background-color: rgba(0,0,0,.4);
         text-align: center;
-        border: none; 
+        border: none;
     }
     .main  dt {
         margin-left: 6px;
@@ -259,7 +253,7 @@
         margin: 0 1px 0 1px;    
     }
     .btnSideBar.light {
-        text-shadow: 
+        text-shadow:
         /* first layer at 1px */
         -1px -1px 0px #000,
         0px -1px 0px #000,
@@ -364,13 +358,18 @@
        -1px  1px 0 #000,
         1px  1px 0 #000;
     }
-/* Control position of carousel */
-    #carouselExampleControls {
+    #carousel {
         position: fixed;
-        bottom: 20px;
+        bottom: 10px;
     }
 
-/* Transcription udner the photos */
+/* Control position of carousel */
+    /* #carouselExampleControls {
+        position: fixed;
+        bottom: 10px;
+    } */
+
+/* Transcription under the photos */
 
     .figure-caption {
         color: white;
@@ -514,7 +513,6 @@
         background: url(../static/images/cover02-360x640.jpg) no-repeat center center fixed rgba(244, 163, 96, 0.329);
         background-size: cover;
     }
-
     .text-left {
         text-align: left;
     }
@@ -536,19 +534,19 @@
     margin-left: auto;
     margin-right: auto; }
 
-IMG.displayedright {
-    float: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
+    IMG.displayedright {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
 
-IMG.displayedleft {
-    float: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
+    IMG.displayedleft {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
 }
-@media only screen and (max-device-width: 799.5px) {
+@media only screen and (min-device-width: 10px) and (max-device-width: 359px){
     .header {
         height: 65px;
         z-index: 1;
@@ -563,10 +561,92 @@ IMG.displayedleft {
         margin: 0 8px 0 -5px;
     }
     h1 {
-        display: none;  
+        display: none;
     }
     p {
-        line-height: 28px; 
+        line-height: 28px;
+    } 
+    ul {
+        margin: 0;
+        padding-left: 20px;
+        padding-right: 0;
+        font-size: 1.1rem;
+    }
+    dl h3 {
+        text-align: left;
+    }
+    ul.margin {
+        padding-left: 10px;
+    }
+    .main dd {
+        margin: 0 -5px ;
+        padding: 0;
+        font-size: 1.1rem;
+    }
+    .main p {
+        font-size: 1.1rem;
+    }
+    .nav-pills a {
+        color: black;
+        padding: 3px;
+    }
+    .topcard {
+        display: none;
+    }
+    .mobile {
+        margin-top: 100vh;
+    }
+    .card-text {
+        margin: 0;
+        padding: 0 2%;
+    }
+    .card-img-top {
+        width: 100$;
+    }
+    .btnSideBar {
+        padding: 0;
+        margin: 5px;
+    }
+    .btn {
+        font-size: 1em;
+    }
+    .sidebar-mobile {
+        position: relative;
+        -webkit-animation: mymove 5s ; /* Safari 4.0 - 8.0 */
+        -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
+        animation: mymove 5s ;
+        animation-delay: 3s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    @keyframes mymove {
+        from {bottom: 0px;}
+        to {bottom: 100vh;}
+    }
+    @-webkit-keyframes mymove {
+        from {bottom: 0px;}
+        to {bottom: 100vh;}
+    }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 799.5px) {
+    .header {
+        height: 65px;
+        z-index: 1;
+    }
+    #otymDropdown, #opowiescDropdown, #wskazowkiDropdown, #galeriaDropdown {
+        background-color: black;
+    }
+    #buttons-lg {
+        display: none;
+    }
+    #buttons-sm {
+        margin: 0 8px 0 -5px;
+    }
+    h1 {
+        display: none;
+    }
+    p {
+        line-height: 28px;
     } 
     ul {
         margin: 0;
@@ -598,18 +678,15 @@ IMG.displayedleft {
         display: none;
     }
     .mobile {
-        /* margin-top: 10vh; */
-        /* padding: 15px; */
         margin-top: 100vh;
     }
     .card-text {
         margin: 0;
         padding: 0 2%;
     }
-    /* .card-img-top {
+    .card-img-top {
         width: auto;
-        border-radius: 80px;
-    } */
+    }
     .btnSideBar {
         padding: 0;
         margin: 5px;
@@ -668,10 +745,6 @@ IMG.displayedleft {
         margin: 0;
         padding: 0 8%;
     }
-    /* .card-img-top {
-        width: auto;
-        border-radius: 80px;
-    } */
     .btn {
         padding: 5px;
     }
@@ -736,7 +809,7 @@ IMG.displayedleft {
         background-size: cover;
     }
     body.light {
-        background: url(../static/images/cover02-1500.jpg) no-repeat center center fixed rgba(244, 163, 96, 0.329); 
+        background: url(../static/images/cover02-1500.jpg) no-repeat center center fixed rgba(244, 163, 96, 0.329);
         background-size: cover;
     }
     #buttons-sm {
