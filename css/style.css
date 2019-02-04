@@ -4,11 +4,9 @@
         height: 100vh;
         margin: 0;
         padding-top: 0;
-        background-size: cover;
     }
     body {
         height: 100vh;
-        margin: 0;
         overflow-x: hidden;
         background-color: sandybrown;
         background-size: cover;
@@ -115,6 +113,22 @@
     .hidden {
         display: none;
     }
+    .opacity{
+        opacity: 0.5;
+        transition: 0.5s ease-in;
+        -moz-transition: opacity 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in;
+        -o-transition: opacity 1s ease-in;
+        cursor: pointer;
+    }
+    .opacity:hover {
+        opacity: 1;
+        transition: 1s ease-out;
+        -moz-transition: opacity 1s ease-out;
+        -webkit-transition: opacity 1s ease-out;
+        -o-transition: opacity 1s ease-out;
+		cursor: pointer;
+    }
 
 /* NAVIGATION */
 
@@ -191,6 +205,20 @@
     a:active {
         text-decoration: none;
     }
+    a > img.img-thumbnail {
+        opacity: 1;
+        transition: 0.5s ease-in;
+        -moz-transition: opacity .5s ease-in-out;
+        -webkit-transition: opacity .5s ease-in;
+        -o-transition: opacity .5s ease-in;
+    }
+    a > img.img-thumbnail:hover {
+        opacity: .7;
+        transition: 1s ease-out;
+        -moz-transition: opacity .5s ease-out;
+        -webkit-transition: opacity .5s ease-out;
+        -o-transition: opacity .5s ease-out;
+    }
 
 /* MAIN */
 
@@ -249,7 +277,7 @@
     .btn {
         padding: 0;
         margin: 0 1px 0 1px;
-        font-size: 1.1em;  
+        font-size: 1.1em;
     }
     .btnSideBar {
         padding: 0;
@@ -291,6 +319,22 @@
 
 /* Carousel Card */
 
+    article.col{
+        height:100vh;
+    }
+
+    .card.carousel-style{
+        width: calc(100% - 30px);
+        position: absolute;
+        bottom: 0px;
+    }
+    .carousel {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100vw;
+        position: fixed;
+        bottom: 10px;
+    }
     .carousel-style {
         margin: 0 ;
         padding: 10px 0;
@@ -343,10 +387,13 @@
         line-height: 25px;
     }
     .card-img-top {
-        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
         border-radius: 80px;
         border: 3px solid rgba(0, 0, 0, 0.4) ;
         text-align: center;
+        align-content: center;
     }
     .sidebar {
         width: 100%;
@@ -361,10 +408,7 @@
        -1px  1px 0 #000,
         1px  1px 0 #000;
     }
-    #carousel {
-        position: fixed;
-        bottom: 10px;
-    }
+
 
 /* Control position of carousel */
     /* #carouselExampleControls {
@@ -387,7 +431,6 @@
         text-align: center;
         margin: 10px;
     }
-
 
 /* Button UP */
 
