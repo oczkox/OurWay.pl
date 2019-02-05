@@ -319,6 +319,10 @@
 
 /* Carousel Card */
 
+    header{
+        z-index:1;
+    }
+
     article.col{
         height:100vh;
     }
