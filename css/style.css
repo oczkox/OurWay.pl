@@ -123,8 +123,8 @@
         -webkit-transition: opacity 1s ease-in;
         -o-transition: opacity 1s ease-in;
         cursor: pointer;
-    } 
-    
+    }
+
     .opacity:hover {
         opacity: 1;
         transition: 1s ease-out;
@@ -133,30 +133,19 @@
         -o-transition: opacity 1s ease-out;
 		cursor: pointer;
     }
-   
-
 
 /* NAVIGATION */
 
     .header {
         height: 130px;
     }
-    nav a:link {
+    nav a:link{
         color: black;
     }
-    .nav-pills  a {
+    nav a:visited{
         color: black;
-        font-size: 1.1em;
     }
-    .nav-pills #Nav a:hover {
-        color: white;
-        background-color: rgba(0,0,0,.6);
-        border-radius: 0;
-    }
-    /* .nav-pills .active a:hover  {
-        border-radius: 10px;
-        background-color: SandyBrown;
-    } */
+    
     #otymDropdown, #opowiescDropdown, #wskazowkiDropdown, #galeriaDropdown {
         color: white;
         background-color: rgba(0,0,0,.4);
